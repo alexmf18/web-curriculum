@@ -5,16 +5,18 @@
   <title>Alex Morcillo - Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script> <!-- [web:7] -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- Font Awesome CDN -->
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> <!-- [web:20] -->
-    <style>
-      .hero-bg {
-        background: url("imagenes/img03.jpg") no-repeat center center fixed;
-        background-size: cover;
-      }
-    </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <style>
+    .hero-bg {
+      background: url("imagenes/img03.jpg") no-repeat center center fixed;
+      background-size: cover;
+    }
+  </style>
 
   <script>
     tailwind.config = {
@@ -33,14 +35,12 @@
 <body class="text-gray-200 font-sans">
   <!-- Hero -->
   <section class="min-h-screen flex flex-col items-center justify-center px-4 hero-bg">
-    <div class="max-w-4xl w-full bg-card/60 rounded-3xl shadow-2xl border border-gray-700 p-8 md:p-10">
+    <div class="max-w-4xl w-full bg-card/60 rounded-3xl shadow-2xl border border-gray-700 p-8 md:p-10" data-aos="fade-up">
       <div class="flex flex-col items-center gap-6 text-center">
         <!-- Avatar -->
-        <div class="relative mb-4">
+        <div class="relative mb-4" data-aos="zoom-in" data-aos-delay="100">
           <div class="w-60 h-60 rounded-full border-4 border-primary p-1 bg-dark">
-            <img src="imagenes/perfil.jpeg"
-                 alt="Foto de perfil"
-                 class="w-full h-full object-cover rounded-full">
+            <img src="imagenes/perfil.jpeg" alt="Foto de perfil" class="w-full h-full object-cover rounded-full">
           </div>
           <span class="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-primary text-dark text-xs font-semibold px-3 py-1 rounded-full">
             #OPENTOWORK
@@ -49,18 +49,18 @@
 
         <!-- Info principal -->
         <div class="text-center space-y-4">
-          <h1 class="text-3xl md:text-4xl font-bold tracking-wide">
+          <h1 class="text-3xl md:text-4xl font-bold tracking-wide" data-aos="fade-up" data-aos-delay="200">
             ALEX MORCILLO
           </h1>
-          <p class="text-primary font-semibold">
+          <p class="text-primary font-semibold" data-aos="fade-up" data-aos-delay="300">
             tecnico informatico &amp; desarrollador web
           </p>
-          <p class="text-sm text-gray-400 max-w-xl">
+          <p class="text-sm text-gray-400 max-w-xl" data-aos="fade-up" data-aos-delay="400">
             Hola! soy Alex Morcillo: técnico informático y desarrollador web con alma creativa y mente analítica. Me encanta transformar ideas en proyectos digitales que conectan con las personas.
           </p>
 
           <!-- Social -->
-          <div class="flex justify-center gap-3 text-lg">
+          <div class="flex justify-center gap-3 text-lg" data-aos="fade-up" data-aos-delay="500">
             <a href="https://www.linkedin.com/in/alex-morcillo/" class="w-9 h-9 flex items-center justify-center rounded-full border border-gray-600 hover:bg-primary hover:text-dark transition">
               <i class="fab fa-linkedin-in"></i>
             </a>
@@ -76,7 +76,7 @@
           </div>
 
           <!-- Botones -->
-          <div class="flex flex-wrap justify-center gap-4 pt-2">
+          <div class="flex flex-wrap justify-center gap-4 pt-2" data-aos="fade-up" data-aos-delay="600">
             <button id="btn-download"
               class="bg-primary text-dark px-6 py-2 rounded-full text-sm font-semibold hover:bg-teal-300 transition flex items-center gap-2">
               <i class="fa-solid fa-download"></i>
@@ -91,32 +91,17 @@
   <!-- About -->
   <section id="about" class="bg-dark py-16 px-4 bg-gradient-to-b from-dark to-slate-900">
     <div class="max-w-5xl mx-auto">
-      <h2 class="text-center text-2xl font-semibold mb-10">
+      <h2 class="text-center text-2xl font-semibold mb-10" data-aos="fade-up">
         Sobre mi
       </h2>
-        <p class="text-lg text-gray-300 text-center max-w-3xl mx-auto mb-10 ">
-            Informático con 7 años de
-            experiencia en soporte técnico
-            y desarrollo de sistemas. Con
-            conocimientos en
-            programación front-end (HTML,
-            CSS, JavaScript) adquiridos por
-            formación y práctica personal.
-            Destaco por mi capacidad de
-            aprendizaje, resolución de
-            problemas y compromiso con la
-            calidad. Actualmente estoy
-            interesado en ampliar mi perfil
-            hacia el ámbito de desarrollo web.
-        <!-- aquí tu texto completo en una sola etiqueta <p> -->
-        </p>
+      <p class="text-lg text-gray-300 text-center max-w-3xl mx-auto mb-10" data-aos="fade-up" data-aos-delay="100">
+        Informático con 7 años de experiencia en soporte técnico y desarrollo de sistemas. Con conocimientos en programación front-end (HTML, CSS, JavaScript) adquiridos por formación y práctica personal. Destaco por mi capacidad de aprendizaje, resolución de problemas y compromiso con la calidad. Actualmente estoy interesado en ampliar mi perfil hacia el ámbito de desarrollo web.
+      </p>
       <div class="grid md:grid-cols-2 gap-10">
         <!-- Texto + detalles -->
-        <div class="space-y-6">
+        <div class="space-y-6" data-aos="fade-right" data-aos-delay="200">
           <div>
-            <h3 class="text-base font-semibold text-primary mb-3">
-              Detalles personales
-            </h3>
+            <h3 class="text-base font-semibold text-primary mb-3">Detalles personales</h3>
             <ul class="text-base space-y-1">
               <li><span class="text-gray-400">Phone:</span> +34 602 106 614</li>
               <li><span class="text-gray-400">Email:</span> alexmf188@gmail.com</li>
@@ -131,33 +116,30 @@
         </div>
 
         <!-- Intereses -->
-        <div>
-          <h3 class="text-base font-semibold text-primary mb-4">
-            My interests
-          </h3>
+        <div data-aos="fade-left" data-aos-delay="200">
+          <h3 class="text-base font-semibold text-primary mb-4">My interests</h3>
           <div class="grid grid-cols-3 gap-3 text-xs">
-            <!-- Cada interés es un botón cuadrado -->
-            <button class="bg-card border border-gray-700 rounded-xl py-4 flex flex-col items-center gap-2 hover:border-primary transition">
+            <button class="bg-card border border-gray-700 rounded-xl py-4 flex flex-col items-center gap-2 hover:border-primary transition" data-aos="zoom-in" data-aos-delay="300">
               <i class="fa-solid fa-gamepad text-primary"></i>
               <span>VIDEOJUEGOS</span>
             </button>
-            <button class="bg-card border border-gray-700 rounded-xl py-4 flex flex-col items-center gap-2 hover:border-primary transition">
+            <button class="bg-card border border-gray-700 rounded-xl py-4 flex flex-col items-center gap-2 hover:border-primary transition" data-aos="zoom-in" data-aos-delay="350">
               <i class="fa-solid fa-music text-primary"></i>
               <span>MUSICA</span>
             </button>
-            <button class="bg-card border border-gray-700 rounded-xl py-4 flex flex-col items-center gap-2 hover:border-primary transition">
+            <button class="bg-card border border-gray-700 rounded-xl py-4 flex flex-col items-center gap-2 hover:border-primary transition" data-aos="zoom-in" data-aos-delay="400">
               <i class="fa-solid fa-plane text-primary"></i>
               <span>VIAJAR</span>
             </button>
-            <button class="bg-card border border-gray-700 rounded-xl py-4 flex flex-col items-center gap-2 hover:border-primary transition">
+            <button class="bg-card border border-gray-700 rounded-xl py-4 flex flex-col items-center gap-2 hover:border-primary transition" data-aos="zoom-in" data-aos-delay="450">
               <i class="fa-solid fa-film text-primary"></i>
               <span>PELICULAS</span>
             </button>
-            <button class="bg-card border border-gray-700 rounded-xl py-4 flex flex-col items-center gap-2 hover:border-primary transition">
-              <i class="fa-solid fa-solid fa-dog text-primary"></i>
+            <button class="bg-card border border-gray-700 rounded-xl py-4 flex flex-col items-center gap-2 hover:border-primary transition" data-aos="zoom-in" data-aos-delay="500">
+              <i class="fa-solid fa-dog text-primary"></i>
               <span>PERROS</span>
             </button>
-            <button class="bg-card border border-gray-700 rounded-xl py-4 flex flex-col items-center gap-2 hover:border-primary transition">
+            <button class="bg-card border border-gray-700 rounded-xl py-4 flex flex-col items-center gap-2 hover:border-primary transition" data-aos="zoom-in" data-aos-delay="550">
               <i class="fa-solid fa-book text-primary"></i>
               <span>LIBROS</span>
             </button>
@@ -170,20 +152,16 @@
   <!-- Skills -->
   <section id="skills" class="bg-dark py-16 px-4 bg-dark">
     <div class="max-w-5xl mx-auto">
-      <h2 class="text-center text-2xl font-semibold mb-10">
+      <h2 class="text-center text-2xl font-semibold mb-10" data-aos="fade-up">
         Habilidades
       </h2>
 
       <div class="grid md:grid-cols-2 gap-10">
         <!-- Technical -->
-        <div>
-          <h3 class="text-base font-semibold text-primary mb-4">
-            Habilidades técnicas
-          </h3>
-
-          <!-- Barra de skill -->
+        <div data-aos="fade-right">
+          <h3 class="text-base font-semibold text-primary mb-4">Habilidades técnicas</h3>
           <div class="space-y-4 text-sm">
-            <div>
+            <div data-aos="slide-right" data-aos-delay="100">
               <div class="flex justify-between mb-1">
                 <span>JavaScript</span>
                 <span>90%</span>
@@ -192,8 +170,7 @@
                 <div class="h-2 rounded-full bg-primary" style="width: 90%;"></div>
               </div>
             </div>
-
-            <div>
+            <div data-aos="slide-right" data-aos-delay="200">
               <div class="flex justify-between mb-1">
                 <span>HTML &amp; CSS</span>
                 <span>85%</span>
@@ -202,8 +179,7 @@
                 <div class="h-2 rounded-full bg-primary" style="width: 85%;"></div>
               </div>
             </div>
-
-            <div>
+            <div data-aos="slide-right" data-aos-delay="300">
               <div class="flex justify-between mb-1">
                 <span>PHP/Laravel</span>
                 <span>80%</span>
@@ -212,8 +188,7 @@
                 <div class="h-2 rounded-full bg-primary" style="width: 80%;"></div>
               </div>
             </div>
-
-            <div>
+            <div data-aos="slide-right" data-aos-delay="400">
               <div class="flex justify-between mb-1">
                 <span>Node.js</span>
                 <span>75%</span>
@@ -226,12 +201,10 @@
         </div>
 
         <!-- Professional -->
-        <div>
-          <h3 class="text-base font-semibold text-primary mb-4">
-            Habilidades profesionales
-          </h3>
+        <div data-aos="fade-left">
+          <h3 class="text-base font-semibold text-primary mb-4">Habilidades profesionales</h3>
           <div class="space-y-4 text-sm">
-            <div>
+            <div data-aos="slide-left" data-aos-delay="100">
               <div class="flex justify-between mb-1">
                 <span>Teamwork</span>
                 <span>90%</span>
@@ -240,8 +213,7 @@
                 <div class="h-2 rounded-full bg-primary" style="width: 90%;"></div>
               </div>
             </div>
-
-            <div>
+            <div data-aos="slide-left" data-aos-delay="200">
               <div class="flex justify-between mb-1">
                 <span>Proactividad</span>
                 <span>85%</span>
@@ -250,8 +222,7 @@
                 <div class="h-2 rounded-full bg-primary" style="width: 85%;"></div>
               </div>
             </div>
-
-            <div>
+            <div data-aos="slide-left" data-aos-delay="300">
               <div class="flex justify-between mb-1">
                 <span>Creatividad</span>
                 <span>80%</span>
@@ -260,8 +231,7 @@
                 <div class="h-2 rounded-full bg-primary" style="width: 80%;"></div>
               </div>
             </div>
-
-            <div>
+            <div data-aos="slide-left" data-aos-delay="400">
               <div class="flex justify-between mb-1">
                 <span>Resolucion de incidencias</span>
                 <span>75%</span>
@@ -281,12 +251,20 @@
     © 2025 Alex Morcillo. All rights reserved.
   </footer>
 
-  <!-- JavaScript básico -->
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-  document.getElementById("btn-download").addEventListener("click", function () {
-    window.location.href = "CVitae_Alex_Morcillo_Fulgencio.pdf";
-  });
-</script>
+    AOS.init({
+      duration: 800,
+      easing: 'ease-out-cubic',
+      once: true // Solo anima una vez al hacer scroll
+    });
+  </script>
 
+  <script>
+    document.getElementById("btn-download").addEventListener("click", function () {
+      window.location.href = "CVitae_Alex_Morcillo_Fulgencio.pdf";
+    });
+  </script>
 </body>
 </html>

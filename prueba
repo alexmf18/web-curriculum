@@ -1,9 +1,9 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="dark" lang="es">
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Web Curriculum Alex Morcillo</title>
+    <title>Web Curriculum Alex Morcillo Completo</title>
     <script
       type="text/javascript"
       nonce="DCagNxRLDaLAfSH2wIhgDw=="
@@ -19,10 +19,6 @@
       rel="stylesheet"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       tailwind.config = {
@@ -45,7 +41,21 @@
         },
       };
     </script>
-    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        scroll-behavior: smooth;
+      }
+      .progress-bar {
+        height: 8px;
+        border-radius: 4px;
+      }
+      .interest-card:hover {
+        border-color: #00d1b2;
+        transform: translateY(-2px);
+        transition: all 0.3s ease;
+      }
+    </style>
   </head>
   <body
     class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300"
@@ -53,7 +63,7 @@
     <div class="fixed top-6 right-6 z-50">
       <button
         class="p-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all"
-        onclick="document.documentElement.classList.toggle('dark')"
+        onclick="document.documentElement.classList.toggle(&#39;dark&#39;)"
       >
         <span class="material-symbols-outlined block dark:hidden text-slate-800"
           >dark_mode</span
@@ -66,12 +76,15 @@
     <section
       class="relative min-h-screen flex items-center justify-center py-20 px-4"
     >
-      <div class="absolute inset-0 z-0 opacity-100 dark:opacity-30">
+      <div class="absolute inset-0 z-0 opacity-20 dark:opacity-40">
         <img
           alt="Tech Background Pattern"
           class="w-full h-full object-cover"
-          src="imagenes/img03.jpg"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsso84Gl56vT23pptsY4iDjt6XIBUXYu6WzYNkz-E1COLXUST43q3PVmuVGwzy0Z-ZTtazetBY32N-z-xGdM6aUujb--QR4MGSQ9mwPgbc7gW6N-1DOQsyXQgEWVCsZ19yxpmJdjVqa-SETKLEuFxfqcRh92Rq7qPi2bxEzZ9zLzpu0Dz481onPtP9H-H7TsSJHTr4Vl0NtdxgT3b1LrxLti7-M4lr7Zn39djN7w2fw9w90LFp87rg1tPiNGUjvRN47hpcU9-1-Cc"
         />
+        <div
+          class="absolute inset-0 bg-gradient-to-b from-transparent via-background-light to-background-light dark:via-background-dark dark:to-background-dark"
+        ></div>
       </div>
       <div class="relative z-10 w-full max-w-3xl" data-aos="fade-up">
         <div
@@ -84,7 +97,7 @@
             <img
               alt="Alex Morcillo Profile"
               class="w-full h-full object-cover rounded-full border-4 border-primary relative z-10 shadow-lg"
-              src="imagenes/perfil.jpeg"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuASd3pj01IUSR8RDXcKuJdLvqEbUo70ocFXFf1uEntmlCsUtI1qp_nm4d8JqcejSFJZrHsLvXpPoCHoI1vsCJ4Wl3QI-EfhpdOT8JoHvL5Wx46ePbHSyaKgcKnK5czicBP82dEV-iB3HhmxZLIuSjUjtbxkbp6ESopDHm8kQ-5xvdMEM7i4LpLDzTZ3F3ji5Qa8OIxb6d8ZLwsXac-XIF06rUIGaYh4jQAxgLtvoWzo0UxSd6UGttVI8GJsjjLPE_LTOpuMOLfYxAo"
             />
             <div
               class="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-primary text-black text-[10px] font-bold px-3 py-1 rounded-full whitespace-nowrap z-20"
@@ -98,7 +111,7 @@
             Alex Morcillo
           </h1>
           <h2 class="text-primary font-semibold text-lg md:text-xl mb-6">
-            técnico informático & desarrollador web
+            técnico informático & desarrollador web web
           </h2>
           <p
             class="text-slate-600 dark:text-slate-400 max-w-xl mx-auto mb-8 leading-relaxed"
@@ -110,22 +123,22 @@
           <div class="flex justify-center space-x-4 mb-10">
             <a
               class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 hover:bg-primary hover:text-black transition-all"
-              href="https://www.linkedin.com/in/alex-morcillo/"
+              href="#"
             >
               <img
                 alt="LinkedIn"
-                class="w-5 h-5 dark:invert-0 icon"
-                src="imagenes/linkedin.png"
+                class="w-5 h-5 dark:invert-0"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOD0qiXfRAhp3O4-OIIK8r1koBZ_YciXu3FkoQ-Sx4gHa4oUDUMtHiKYB-NkSLq3TsPTioPRd_AbVY_Gh-scjj5FCWgpy8ra10WLMxv7BsZ6k9i_g8ORCFnsdT2y_hIRUEVkZ5xjkM0Be8c40umAfh5Za8d70Qo0aNV2NfHnzz9qm1JVSjlFKdvsRBVeH7dA08PSHE3anz4fxDXAqvelpTFnXXE4tlCEmNL8zKUMeI2eRABxno3IUXeR3TrGux-HGw8DML47yqgV0"
               />
             </a>
             <a
               class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 hover:bg-primary hover:text-black transition-all"
-              href="https://github.com/alexmf18"
+              href="#"
             >
               <img
                 alt="GitHub"
-                class="w-5 h-5 dark:invert-0 icon"
-                src="imagenes/github.png"
+                class="w-5 h-5 dark:invert-0"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAazzLlzCANPA7OgAxOAeesbDzRy1JJ7q5VA6enCDWbsfZk9z_wRpuF6SfD0Pxi_dqKqFh1_lK_XPSDKjiuiIRPKiSfnSiBPAxQWlKocAhvsWUxwpezrPlaw01-U-2fXIrA7HZWjlTBgcCfc18FNeKeF2ddAjdevdx_4u4TCPkD_1l5hQZCALNzLvxdibGx3pv2K4St3HA0N7vQdH1ETgTOB9E0bAEBv6JkdTTGp-Ral5egGhSbM80h9lkoFH_-ZUOq-mNR3ee1LuE"
               />
             </a>
             <a
@@ -134,14 +147,22 @@
             >
               <img
                 alt="Instagram"
-                class="w-5 h-5 dark:invert-0 icon"
-                src="imagenes/instagram.png"
+                class="w-5 h-5 dark:invert-0"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfvdbXYRJ85kZHVa_5A4CBZ78C8202zWJ7iXXCKOgAME1Ss4eR6ovNHyr1weJHZ2vw4817HoUacAm1d1FhXDWK0UywssjDJk50qG5XioYgC2dFeFzDKZRZ7SH3XxfVLgruRwMmf3LchlbSZk9TV-WcpgoYItR8vvPLbYJIeiiHHgDiFwrTY77yiV5Kr1HBqy-7G-tITaptc3bO2GfkscVS9d8gVUZPr9cuQuZBf4II42QADsUbE4nTC_0telUmGqRzmfR4gm8I-LQ"
               />
+            </a>
+            <a
+              class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 hover:bg-primary hover:text-black transition-all"
+              href="#"
+            >
+              <span class="material-symbols-outlined text-[20px]"
+                >alternate_email</span
+              >
             </a>
           </div>
           <a
             class="inline-flex items-center px-8 py-4 bg-primary text-black font-bold rounded-full hover:shadow-[0_0_20px_rgba(0,209,178,0.4)] transition-all group"
-            href="CVitae_Alex_Morcillo_Fulgencio.pdf"
+            href="#"
           >
             <span
               class="material-symbols-outlined mr-2 group-hover:animate-bounce"
@@ -194,7 +215,7 @@
                 <span class="font-semibold w-32 shrink-0">Linkedin:</span>
                 <a
                   class="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors truncate"
-                  href="https://www.linkedin.com/in/alex-morcillo/"
+                  href="#"
                   >linkedin.com/in/alex-morcillo</a
                 >
               </li>
@@ -215,7 +236,7 @@
           <div data-aos="fade-left">
             <h4 class="text-primary font-bold text-xl mb-8 flex items-center">
               <span class="material-symbols-outlined mr-2">favorite</span>
-              Mis hobbies
+              My interests
             </h4>
             <div class="grid grid-cols-3 gap-4">
               <div
@@ -426,127 +447,122 @@
           Portfolio
         </h3>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <a href="https://alexmf18.github.io/finanzapp/">
-            <div
-              class="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all duration-300 shadow-lg"
-              data-aos="zoom-in"
-            >
-              <div class="h-48 overflow-hidden relative">
-                <img
-                  alt="dashboard"
-                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  src="imagenes/finanzapp.png"
-                />
-                <div
-                  class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"
-                ></div>
-              </div>
-              <div class="p-6">
-                <h5 class="text-xl font-bold mb-3">Finanzapp</h5>
-                <p
-                  class="text-slate-600 dark:text-slate-400 text-sm mb-4 leading-relaxed"
+          <div
+            class="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all duration-300 shadow-lg"
+            data-aos="zoom-in"
+          >
+            <div class="h-48 overflow-hidden relative">
+              <img
+                alt="E-commerce Project"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPKjPTYdWoY8g6XF8b7h8d_o5QTa0ovpeUi29wCrpA4H6neE6yeoT8oTC6mrszWq6vqNyDtM3NaVCS5n_hN_TnQqsf2RE66Jb_umgE9SQHzkXke3EoKhpYdpg5Wv3wwFwftGEfpSTqvHRijl5nBsSNJ5m41sCyXDa-OZ4nAjZxj1eWGNvRYUhTvKV1IElVqI0vCZcS3qr4m8XnZgHN7zC_l7mboLnISwVo_jy57ZdPNf4U5jLxkwCt_7QDbX1wPawfHZ07Wgo5tx4"
+              />
+              <div
+                class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"
+              ></div>
+            </div>
+            <div class="p-6">
+              <h5 class="text-xl font-bold mb-3">Plataforma E-commerce</h5>
+              <p
+                class="text-slate-600 dark:text-slate-400 text-sm mb-4 leading-relaxed"
+              >
+                Desarrollo de una tienda online completa con gestión de carrito,
+                pasarela de pagos y panel de administración.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-2 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded uppercase"
+                  >React</span
                 >
-                  Dashboard para gestionar finanzas personales y empresariales.
-                </p>
-                <div class="flex flex-wrap gap-2">
-                  <span
-                    class="px-2 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded uppercase"
-                    >HTML5</span
-                  >
-                  <span
-                    class="px-2 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded uppercase"
-                    >JavaScript</span
-                  >
-                  <span
-                    class="px-2 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded uppercase"
-                    >Tailwind</span
-                  >
-                </div>
+                <span
+                  class="px-2 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded uppercase"
+                  >Node.js</span
+                >
+                <span
+                  class="px-2 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded uppercase"
+                  >MongoDB</span
+                >
               </div>
             </div>
-          </a>
-          <a href="https://alexmf18.github.io/travel-agency/">
-            <div
-              class="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all duration-300 shadow-lg"
-              data-aos="zoom-in"
-              data-aos-delay="100"
-            >
-              <div class="h-48 overflow-hidden relative">
-                <img
-                  alt="Dashboard Project"
-                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  src="imagenes/japon.png"
-                />
-                <div
-                  class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"
-                ></div>
-              </div>
-              <div class="p-6">
-                <h5 class="text-xl font-bold mb-3">Japontravel</h5>
-                <p
-                  class="text-slate-600 dark:text-slate-400 text-sm mb-4 leading-relaxed"
+          </div>
+          <div
+            class="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all duration-300 shadow-lg"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+          >
+            <div class="h-48 overflow-hidden relative">
+              <img
+                alt="Dashboard Project"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7428k32gxSVXUEKiNXtpjY9X_EVessEimUnTUXPhgcQzg3jBpd6CiWJx97fKX491TzOeoSd4Isk0y-Vmt9crbFbpie8hd1HYFUOQ-IW7bP19YlScVhVk7UMNOQkxPtZJ9GeBd4F7gs_kowAVqdPrKDC7L8xJoCSiTP3Plzvcthw1TNaf-lFMBJP3mtqbTk3pBlFjSLZxHyQWSe7oy1ACrNChjFpSvNHtDiCjpGAVI8E6_8P1opqpAtpMjhPHa8avVf3u91s8Po0A"
+              />
+              <div
+                class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"
+              ></div>
+            </div>
+            <div class="p-6">
+              <h5 class="text-xl font-bold mb-3">Admin Dashboard Pro</h5>
+              <p
+                class="text-slate-600 dark:text-slate-400 text-sm mb-4 leading-relaxed"
+              >
+                Panel de control empresarial con visualización de datos en
+                tiempo real y gestión de usuarios avanzada.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-2 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded uppercase"
+                  >Vue.js</span
                 >
-                  Web de una agencia de viajes organizados a Japon
-                </p>
-                <div class="flex flex-wrap gap-2">
-                  <span
-                    class="px-2 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded uppercase"
-                    >HTML5</span
-                  >
-                  <span
-                    class="px-2 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded uppercase"
-                    >Tailwind</span
-                  >
-                  <span
-                    class="px-2 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded uppercase"
-                    >Animaciones</span
-                  >
-                </div>
+                <span
+                  class="px-2 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded uppercase"
+                  >Tailwind</span
+                >
+                <span
+                  class="px-2 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded uppercase"
+                  >Chart.js</span
+                >
               </div>
             </div>
-          </a>
-          <a href="https://interactive-hystory.vercel.app/">
-            <div
-              class="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all duration-300 shadow-lg"
-              data-aos="zoom-in"
-              data-aos-delay="200"
-            >
-              <div class="h-48 overflow-hidden relative">
-                <img
-                  alt="Adventure game"
-                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  src="imagenes/adventure.png"
-                />
-                <div
-                  class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"
-                ></div>
-              </div>
-
-              <div class="p-6">
-                <h5 class="text-xl font-bold mb-3">Text game</h5>
-                <p
-                  class="text-slate-600 dark:text-slate-400 text-sm mb-4 leading-relaxed"
+          </div>
+          <div
+            class="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all duration-300 shadow-lg"
+            data-aos="zoom-in"
+            data-aos-delay="200"
+          >
+            <div class="h-48 overflow-hidden relative">
+              <img
+                alt="SaaS App"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD65Ko_u4EXnOCe-CQSo_phqYJRguSfxTaXieLe-VsfkhLFIZF6KR-u5rWU7k9PNpa5nTidElae7eUrlKjSyq9TtFzviULMHbn4NE-rqk4Ww7sWx69Dj4OpVgosnxfiZ1LxlW1TS7jeFs_JK1u3sErIS_gpUZYei0Kthjn6m6DQUZpUzbxU-Y4FDg3zTvVGV3Dh9T27CU7QKF8rtes200FCt_XTgsRWT6BrBOikdWlu09ZI8nakDme1PxS6JSJ3cpSR98ciRtCYT3U"
+              />
+              <div
+                class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"
+              ></div>
+            </div>
+            <div class="p-6">
+              <h5 class="text-xl font-bold mb-3">Task Manager SaaS</h5>
+              <p
+                class="text-slate-600 dark:text-slate-400 text-sm mb-4 leading-relaxed"
+              >
+                Herramienta de gestión de tareas colaborativa con notificaciones
+                push y sincronización en la nube.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-2 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded uppercase"
+                  >Laravel</span
                 >
-                  Historia de fantasia interactiva al estilo de Dragones y
-                  Mazmorras
-                </p>
-                <div class="flex flex-wrap gap-2">
-                  <span
-                    class="px-2 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded uppercase"
-                    >React</span
-                  >
-                  <span
-                    class="px-2 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded uppercase"
-                    >Animaciones</span
-                  >
-                  <span
-                    class="px-2 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded uppercase"
-                    >Tailwind</span
-                  >
-                </div>
+                <span
+                  class="px-2 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded uppercase"
+                  >MySQL</span
+                >
+                <span
+                  class="px-2 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded uppercase"
+                  >Pusher</span
+                >
               </div>
             </div>
-          </a>
+          </div>
         </div>
       </div>
     </section>

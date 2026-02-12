@@ -3,15 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Web Curriculum Alex Morcillo</title>
-    <script
-      type="text/javascript"
-      nonce="DCagNxRLDaLAfSH2wIhgDw=="
-      src="https://contribution.usercontent.google.com/kIVKBJwQDsVdq0AujqI_nl67ad85fb9QDQ0WqKQ9C_q-ysJqAAYCnvKGL2jXN6caS-_uzNfjHqpjw0STQyf_SbSS4wlqaxo1A_n9CrerSBsvqdlpZKrXcn1MtsDWCdLklnqRJxKFWsWV2o4HPr060bar7EtD_M9xIm27d2_xCn0iJPZxjXXTVSBbVZFnPl8bImt58ZM6HrexZ2tt3KQYYmVbV29BHuW7Cn8AUNuyQI3fhOLQu4IWY8ELEbN6o2loRfXGH1vS-hHIUVOy71Eq3r3_X3mUmyGzgbPh0jB7pnpIwQeKAQQduXCGmkY2YCbsLhGwBPBe6eWFgw9Ws1RszNhmvF98S4ozet8gsYgecDzd_219YchUYtZRhb4NdMGDIzgV5N5-h7bkQYrf-_uqv1dcBhHbYViIVqu3DryHYPrUdn_HybACY1Wj0Wm2Nh4gWRBfcrJpuTPsRjfSG4Sv2wT_P87YlAbAP-dBy4VFPuXucDiut5QkiKyhXvEDOo9kMBNeWLphqirracJ__y9HfJvAwvlGgP8hKi-P2UIvvonTCvukaaVEFYAfLHG2oymKAByqzCLtGysx2rytLf5tP8qeO69PVZhTWLyAJ3mQNb0m_hdoS06Vt-gVixFgA3g53prDQytcuLBcCMVjTNA18u30ki9xY9d1KcJamJeUHSnK0dqqL5GKJvbxFqJK1pNFzZI-ITxbMRSFPjE3r_PYdxuYLqJBhc7kRNL0Xvw0lmPWnzZPVdkDAYt3C_58XLrPVqOEMXlHXJEwSn7tPVvc2pXiaeVQYMtg67RaOA"
-    ></script>
+    <title>Alex Morcillo | Desarrollador Web & Técnico Informático</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
     <link
@@ -31,9 +26,12 @@
           extend: {
             colors: {
               primary: "#00D1B2",
-              "background-light": "#f1f5f9",
+              "primary-light": "#00e6c3",
+              secondary: "#00b4d8",
+              "background-light": "#f8fafc",
               "background-dark": "#050810",
-              "card-dark": "#111827",
+              "card-dark": "#0f1629",
+              "card-dark-2": "#111827",
             },
             fontFamily: {
               display: ["Inter", "sans-serif"],
@@ -50,113 +48,155 @@
   <body
     class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300"
   >
-    <div class="fixed top-6 right-6 z-50">
-      <button
-        class="p-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all"
-        onclick="document.documentElement.classList.toggle('dark')"
-      >
-        <span class="material-symbols-outlined block dark:hidden text-slate-800"
-          >dark_mode</span
-        >
-        <span class="material-symbols-outlined hidden dark:block text-white"
-          >light_mode</span
-        >
-      </button>
-    </div>
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar fixed top-0 left-0 right-0 z-50 py-4 px-6">
+      <div class="max-w-6xl mx-auto flex items-center justify-between">
+        <a href="#" class="text-xl font-black tracking-tight gradient-text">AM</a>
+        <!-- Desktop Nav -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#hero" class="nav-link text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary transition-colors">Inicio</a>
+          <a href="#about" class="nav-link text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary transition-colors">Sobre mi</a>
+          <a href="#skills" class="nav-link text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary transition-colors">Habilidades</a>
+          <a href="#portfolio" class="nav-link text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary transition-colors">Portfolio</a>
+          <button
+            id="theme-toggle"
+            class="p-2 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-primary/20 transition-all"
+            onclick="document.documentElement.classList.toggle('dark')"
+          >
+            <span class="material-symbols-outlined block dark:hidden text-slate-700 text-[20px]">dark_mode</span>
+            <span class="material-symbols-outlined hidden dark:block text-slate-300 text-[20px]">light_mode</span>
+          </button>
+        </div>
+        <!-- Mobile Menu Button -->
+        <div class="flex items-center gap-3 md:hidden">
+          <button
+            class="p-2 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-primary/20 transition-all"
+            onclick="document.documentElement.classList.toggle('dark')"
+          >
+            <span class="material-symbols-outlined block dark:hidden text-slate-700 text-[20px]">dark_mode</span>
+            <span class="material-symbols-outlined hidden dark:block text-slate-300 text-[20px]">light_mode</span>
+          </button>
+          <button id="mobile-menu-btn" class="p-2 rounded-lg text-slate-600 dark:text-slate-300">
+            <span class="material-symbols-outlined text-[24px]">menu</span>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile Menu Panel -->
+      <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 w-64 h-full bg-white dark:bg-card-dark z-50 shadow-2xl p-8 md:hidden">
+        <button id="mobile-menu-close" class="absolute top-4 right-4 p-2 text-slate-500">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+        <div class="flex flex-col space-y-6 mt-12">
+          <a href="#hero" class="text-lg font-medium text-slate-700 dark:text-slate-200 hover:text-primary transition-colors mobile-nav-link">Inicio</a>
+          <a href="#about" class="text-lg font-medium text-slate-700 dark:text-slate-200 hover:text-primary transition-colors mobile-nav-link">Sobre mi</a>
+          <a href="#skills" class="text-lg font-medium text-slate-700 dark:text-slate-200 hover:text-primary transition-colors mobile-nav-link">Habilidades</a>
+          <a href="#portfolio" class="text-lg font-medium text-slate-700 dark:text-slate-200 hover:text-primary transition-colors mobile-nav-link">Portfolio</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ===== HERO SECTION ===== -->
     <section
-      class="relative min-h-screen flex items-center justify-center py-20 px-4"
+      id="hero"
+      class="relative min-h-screen flex items-center justify-center py-20 px-4 overflow-hidden"
     >
-      <div class="absolute inset-0 z-0 opacity-100 dark:opacity-30">
+      <!-- Background Image with Gradient Overlay -->
+      <div class="absolute inset-0 z-0">
         <img
           alt="Tech Background Pattern"
           class="w-full h-full object-cover"
           src="imagenes/img03.jpg"
         />
+        <div class="absolute inset-0 bg-gradient-to-br from-white/80 via-white/60 to-primary/10 dark:from-background-dark/90 dark:via-background-dark/80 dark:to-primary/5"></div>
       </div>
-      <div class="relative z-10 w-full max-w-3xl" data-aos="fade-up">
+      <!-- Floating Particles Container -->
+      <div id="particles" class="absolute inset-0 z-[1] overflow-hidden"></div>
+
+      <div class="relative z-10 w-full max-w-3xl" data-aos="fade-up" data-aos-duration="1000">
         <div
-          class="bg-white/70 dark:bg-slate-800/50 backdrop-blur-xl border border-slate-200 dark:border-slate-700 p-8 md:p-12 rounded-[2.5rem] shadow-2xl text-center"
+          class="bg-white/60 dark:bg-slate-800/40 backdrop-blur-2xl border border-white/30 dark:border-slate-700/50 p-8 md:p-14 rounded-[2.5rem] shadow-[0_20px_80px_rgba(0,0,0,0.08)] dark:shadow-[0_20px_80px_rgba(0,209,178,0.05)] text-center"
         >
-          <div class="relative w-40 h-40 mx-auto mb-8">
+          <!-- Profile Image with Spinning Glow -->
+          <div class="relative w-36 h-36 md:w-44 md:h-44 mx-auto mb-8">
+            <div class="profile-glow w-full h-full rounded-full">
+              <img
+                alt="Alex Morcillo Profile"
+                class="w-full h-full object-cover rounded-full relative z-10 shadow-lg"
+                src="imagenes/perfil.jpeg"
+              />
+            </div>
             <div
-              class="absolute inset-0 rounded-full border-4 border-primary animate-pulse"
-            ></div>
-            <img
-              alt="Alex Morcillo Profile"
-              class="w-full h-full object-cover rounded-full border-4 border-primary relative z-10 shadow-lg"
-              src="imagenes/perfil.jpeg"
-            />
-            <div
-              class="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-primary text-black text-[10px] font-bold px-3 py-1 rounded-full whitespace-nowrap z-20"
+              class="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-primary text-black text-[10px] font-bold px-3 py-1 rounded-full whitespace-nowrap z-20 shadow-lg"
             >
               #OPENTOWORK
             </div>
           </div>
+
+          <!-- Name with Gradient -->
           <h1
-            class="text-4xl md:text-5xl font-bold tracking-tight mb-2 text-slate-900 dark:text-white uppercase"
+            class="text-4xl md:text-6xl font-black tracking-tight mb-3 gradient-text uppercase"
           >
             Alex Morcillo
           </h1>
-          <h2 class="text-primary font-semibold text-lg md:text-xl mb-6">
-            técnico informático & desarrollador web
+
+          <!-- Subtitle with typing effect -->
+          <h2 class="text-primary font-semibold text-lg md:text-xl mb-6 flex items-center justify-center gap-2">
+            <span class="material-symbols-outlined text-secondary">code</span>
+            <span id="typed-text" class="typing-text"></span>
           </h2>
+
           <p
-            class="text-slate-600 dark:text-slate-400 max-w-xl mx-auto mb-8 leading-relaxed"
+            class="text-slate-600 dark:text-slate-400 max-w-xl mx-auto mb-8 leading-relaxed text-base md:text-lg"
           >
             Hola! soy Alex Morcillo: técnico informático y desarrollador web con
             alma creativa y mente analítica. Me encanta transformar ideas en
             proyectos digitales que conectan con las personas.
           </p>
+
+          <!-- Social Icons -->
           <div class="flex justify-center space-x-4 mb-10">
             <a
-              class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 hover:bg-primary hover:text-black transition-all"
+              class="social-icon w-12 h-12 flex items-center justify-center rounded-full bg-slate-100 dark:bg-slate-700/50 text-slate-600 dark:text-slate-300 hover:bg-primary hover:text-black border border-slate-200 dark:border-slate-600"
               href="https://www.linkedin.com/in/alex-morcillo/"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <img
-                alt="LinkedIn"
-                class="w-5 h-5 dark:invert-0 icon"
-                src="imagenes/linkedin.png"
-              />
+              <i class="fab fa-linkedin-in text-lg"></i>
             </a>
             <a
-              class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 hover:bg-primary hover:text-black transition-all"
+              class="social-icon w-12 h-12 flex items-center justify-center rounded-full bg-slate-100 dark:bg-slate-700/50 text-slate-600 dark:text-slate-300 hover:bg-primary hover:text-black border border-slate-200 dark:border-slate-600"
               href="https://github.com/alexmf18"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <img
-                alt="GitHub"
-                class="w-5 h-5 dark:invert-0 icon"
-                src="imagenes/github.png"
-              />
+              <i class="fab fa-github text-lg"></i>
             </a>
             <a
-              class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 hover:bg-primary hover:text-black transition-all"
+              class="social-icon w-12 h-12 flex items-center justify-center rounded-full bg-slate-100 dark:bg-slate-700/50 text-slate-600 dark:text-slate-300 hover:bg-primary hover:text-black border border-slate-200 dark:border-slate-600"
               href="#"
             >
-              <img
-                alt="Instagram"
-                class="w-5 h-5 dark:invert-0 icon"
-                src="imagenes/instagram.png"
-              />
+              <i class="fab fa-instagram text-lg"></i>
             </a>
           </div>
+
+          <!-- CTA Button -->
           <a
-            class="inline-flex items-center px-8 py-4 bg-primary text-black font-bold rounded-full hover:shadow-[0_0_20px_rgba(0,209,178,0.4)] transition-all group"
+            class="btn-primary inline-flex items-center px-8 py-4 bg-gradient-to-r from-primary to-secondary text-black font-bold rounded-full"
             href="CVitae_Alex_Morcillo_Fulgencio.pdf"
           >
-            <span
-              class="material-symbols-outlined mr-2 group-hover:animate-bounce"
-              >download</span
-            >
+            <span class="material-symbols-outlined mr-2">download</span>
             Descargar CV
           </a>
         </div>
       </div>
     </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
     <section class="py-24 px-4 bg-slate-50 dark:bg-[#080d1a]" id="about">
       <div class="max-w-6xl mx-auto">
-        <h3 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">
-          Sobre mi
-        </h3>
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h3 class="text-3xl md:text-4xl font-bold section-title">Sobre mi</h3>
+        </div>
         <div
           class="max-w-4xl mx-auto text-center mb-16"
           data-aos="fade-up"
@@ -172,247 +212,188 @@
           </p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-20">
+          <!-- Personal Details Card -->
           <div data-aos="fade-right">
-            <h4 class="text-primary font-bold text-xl mb-8 flex items-center">
-              <span class="material-symbols-outlined mr-2">person_pin</span>
-              Detalles personales
-            </h4>
-            <ul class="space-y-4">
-              <li class="flex items-start">
-                <span class="font-semibold w-32 shrink-0">Phone:</span>
-                <span class="text-slate-600 dark:text-slate-400"
-                  >+34 602 106 614</span
-                >
-              </li>
-              <li class="flex items-start">
-                <span class="font-semibold w-32 shrink-0">Email:</span>
-                <span class="text-slate-600 dark:text-slate-400"
-                  >alexmf188@gmail.com</span
-                >
-              </li>
-              <li class="flex items-start">
-                <span class="font-semibold w-32 shrink-0">Linkedin:</span>
-                <a
-                  class="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors truncate"
-                  href="https://www.linkedin.com/in/alex-morcillo/"
-                  >linkedin.com/in/alex-morcillo</a
-                >
-              </li>
-              <li class="flex items-start">
-                <span class="font-semibold w-32 shrink-0">Residencia:</span>
-                <span class="text-slate-600 dark:text-slate-400"
-                  >Vallirana, 08759, Barcelona</span
-                >
-              </li>
-              <li class="flex items-start">
-                <span class="font-semibold w-32 shrink-0">Estado:</span>
-                <span class="text-primary font-medium"
-                  >Buscando trabajo activamente</span
-                >
-              </li>
-            </ul>
+            <div class="about-card rounded-2xl p-8 border border-slate-200 dark:border-slate-700/50">
+              <h4 class="text-primary font-bold text-xl mb-8 flex items-center">
+                <span class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mr-3">
+                  <span class="material-symbols-outlined text-primary">person_pin</span>
+                </span>
+                Detalles personales
+              </h4>
+              <ul class="space-y-5">
+                <li class="flex items-center group">
+                  <span class="material-symbols-outlined text-primary mr-3 text-[20px]">phone</span>
+                  <span class="font-semibold w-28 shrink-0 text-sm">Phone:</span>
+                  <span class="text-slate-600 dark:text-slate-400 text-sm">+34 602 106 614</span>
+                </li>
+                <li class="flex items-center group">
+                  <span class="material-symbols-outlined text-primary mr-3 text-[20px]">mail</span>
+                  <span class="font-semibold w-28 shrink-0 text-sm">Email:</span>
+                  <span class="text-slate-600 dark:text-slate-400 text-sm">alexmf188@gmail.com</span>
+                </li>
+                <li class="flex items-center group">
+                  <span class="material-symbols-outlined text-primary mr-3 text-[20px]">link</span>
+                  <span class="font-semibold w-28 shrink-0 text-sm">Linkedin:</span>
+                  <a
+                    class="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors text-sm truncate"
+                    href="https://www.linkedin.com/in/alex-morcillo/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >linkedin.com/in/alex-morcillo</a>
+                </li>
+                <li class="flex items-center group">
+                  <span class="material-symbols-outlined text-primary mr-3 text-[20px]">location_on</span>
+                  <span class="font-semibold w-28 shrink-0 text-sm">Residencia:</span>
+                  <span class="text-slate-600 dark:text-slate-400 text-sm">Vallirana, Barcelona</span>
+                </li>
+                <li class="flex items-center group">
+                  <span class="material-symbols-outlined text-primary mr-3 text-[20px]">work</span>
+                  <span class="font-semibold w-28 shrink-0 text-sm">Estado:</span>
+                  <span class="text-primary font-medium text-sm flex items-center gap-1">
+                    <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                    Buscando trabajo
+                  </span>
+                </li>
+              </ul>
+            </div>
           </div>
+          <!-- Hobbies -->
           <div data-aos="fade-left">
-            <h4 class="text-primary font-bold text-xl mb-8 flex items-center">
-              <span class="material-symbols-outlined mr-2">favorite</span>
-              Mis hobbies
-            </h4>
-            <div class="grid grid-cols-3 gap-4">
-              <div
-                class="interest-card border border-slate-200 dark:border-slate-800 p-4 rounded-xl flex flex-col items-center justify-center bg-white/50 dark:bg-slate-900/50"
-              >
-                <span class="material-symbols-outlined text-primary mb-2"
-                  >sports_esports</span
-                >
-                <span class="text-[10px] font-bold uppercase tracking-wider"
-                  >Videojuegos</span
-                >
-              </div>
-              <div
-                class="interest-card border border-slate-200 dark:border-slate-800 p-4 rounded-xl flex flex-col items-center justify-center bg-white/50 dark:bg-slate-900/50"
-              >
-                <span class="material-symbols-outlined text-primary mb-2"
-                  >music_note</span
-                >
-                <span class="text-[10px] font-bold uppercase tracking-wider"
-                  >Musica</span
-                >
-              </div>
-              <div
-                class="interest-card border border-slate-200 dark:border-slate-800 p-4 rounded-xl flex flex-col items-center justify-center bg-white/50 dark:bg-slate-900/50"
-              >
-                <span class="material-symbols-outlined text-primary mb-2"
-                  >flight</span
-                >
-                <span class="text-[10px] font-bold uppercase tracking-wider"
-                  >Viajar</span
-                >
-              </div>
-              <div
-                class="interest-card border border-slate-200 dark:border-slate-800 p-4 rounded-xl flex flex-col items-center justify-center bg-white/50 dark:bg-slate-900/50"
-              >
-                <span class="material-symbols-outlined text-primary mb-2"
-                  >movie</span
-                >
-                <span class="text-[10px] font-bold uppercase tracking-wider"
-                  >Películas</span
-                >
-              </div>
-              <div
-                class="interest-card border border-slate-200 dark:border-slate-800 p-4 rounded-xl flex flex-col items-center justify-center bg-white/50 dark:bg-slate-900/50"
-              >
-                <span class="material-symbols-outlined text-primary mb-2"
-                  >pets</span
-                >
-                <span class="text-[10px] font-bold uppercase tracking-wider"
-                  >Perros</span
-                >
-              </div>
-              <div
-                class="interest-card border border-slate-200 dark:border-slate-800 p-4 rounded-xl flex flex-col items-center justify-center bg-white/50 dark:bg-slate-900/50"
-              >
-                <span class="material-symbols-outlined text-primary mb-2"
-                  >menu_book</span
-                >
-                <span class="text-[10px] font-bold uppercase tracking-wider"
-                  >Libros</span
-                >
+            <div class="about-card rounded-2xl p-8 border border-slate-200 dark:border-slate-700/50">
+              <h4 class="text-primary font-bold text-xl mb-8 flex items-center">
+                <span class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mr-3">
+                  <span class="material-symbols-outlined text-primary">favorite</span>
+                </span>
+                Mis hobbies
+              </h4>
+              <div class="grid grid-cols-3 gap-4">
+                <div class="interest-card border border-slate-200 dark:border-slate-700/50 p-5 rounded-xl flex flex-col items-center justify-center bg-white/50 dark:bg-slate-900/30">
+                  <span class="material-symbols-outlined text-primary mb-2 text-[28px]">sports_esports</span>
+                  <span class="text-[10px] font-bold uppercase tracking-wider">Videojuegos</span>
+                </div>
+                <div class="interest-card border border-slate-200 dark:border-slate-700/50 p-5 rounded-xl flex flex-col items-center justify-center bg-white/50 dark:bg-slate-900/30">
+                  <span class="material-symbols-outlined text-primary mb-2 text-[28px]">music_note</span>
+                  <span class="text-[10px] font-bold uppercase tracking-wider">Musica</span>
+                </div>
+                <div class="interest-card border border-slate-200 dark:border-slate-700/50 p-5 rounded-xl flex flex-col items-center justify-center bg-white/50 dark:bg-slate-900/30">
+                  <span class="material-symbols-outlined text-primary mb-2 text-[28px]">flight</span>
+                  <span class="text-[10px] font-bold uppercase tracking-wider">Viajar</span>
+                </div>
+                <div class="interest-card border border-slate-200 dark:border-slate-700/50 p-5 rounded-xl flex flex-col items-center justify-center bg-white/50 dark:bg-slate-900/30">
+                  <span class="material-symbols-outlined text-primary mb-2 text-[28px]">movie</span>
+                  <span class="text-[10px] font-bold uppercase tracking-wider">Películas</span>
+                </div>
+                <div class="interest-card border border-slate-200 dark:border-slate-700/50 p-5 rounded-xl flex flex-col items-center justify-center bg-white/50 dark:bg-slate-900/30">
+                  <span class="material-symbols-outlined text-primary mb-2 text-[28px]">pets</span>
+                  <span class="text-[10px] font-bold uppercase tracking-wider">Perros</span>
+                </div>
+                <div class="interest-card border border-slate-200 dark:border-slate-700/50 p-5 rounded-xl flex flex-col items-center justify-center bg-white/50 dark:bg-slate-900/30">
+                  <span class="material-symbols-outlined text-primary mb-2 text-[28px]">menu_book</span>
+                  <span class="text-[10px] font-bold uppercase tracking-wider">Libros</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="py-24 px-4 bg-white dark:bg-background-dark">
+
+    <!-- ===== SKILLS SECTION ===== -->
+    <section class="py-24 px-4 bg-white dark:bg-background-dark" id="skills">
       <div class="max-w-6xl mx-auto">
-        <h3 class="text-3xl font-bold text-center mb-16" data-aos="fade-up">
-          Habilidades
-        </h3>
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h3 class="text-3xl md:text-4xl font-bold section-title">Habilidades</h3>
+        </div>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div data-aos="fade-right">
-            <h4 class="text-primary font-bold text-lg mb-8">
+            <h4 class="text-primary font-bold text-lg mb-8 flex items-center">
+              <span class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center mr-3">
+                <span class="material-symbols-outlined text-primary text-[18px]">terminal</span>
+              </span>
               Habilidades técnicas
             </h4>
-            <div class="space-y-8">
-              <div>
+            <div class="space-y-6">
+              <div class="skill-item">
                 <div class="flex justify-between mb-2">
-                  <span class="text-sm font-semibold">JavaScript/React</span>
-                  <span class="text-sm text-slate-500">90%</span>
+                  <span class="text-sm font-semibold">JavaScript / React</span>
+                  <span class="text-sm text-primary font-bold">90%</span>
                 </div>
-                <div
-                  class="w-full bg-slate-200 dark:bg-slate-800 h-2 rounded-full overflow-hidden"
-                >
-                  <div
-                    class="bg-primary h-full rounded-full"
-                    style="width: 90%"
-                  ></div>
+                <div class="w-full bg-slate-200 dark:bg-slate-800 h-2.5 rounded-full overflow-hidden">
+                  <div class="skill-bar-fill" data-width="90%"></div>
                 </div>
               </div>
-              <div>
+              <div class="skill-item">
                 <div class="flex justify-between mb-2">
                   <span class="text-sm font-semibold">HTML & CSS</span>
-                  <span class="text-sm text-slate-500">85%</span>
+                  <span class="text-sm text-primary font-bold">85%</span>
                 </div>
-                <div
-                  class="w-full bg-slate-200 dark:bg-slate-800 h-2 rounded-full overflow-hidden"
-                >
-                  <div
-                    class="bg-primary h-full rounded-full"
-                    style="width: 85%"
-                  ></div>
+                <div class="w-full bg-slate-200 dark:bg-slate-800 h-2.5 rounded-full overflow-hidden">
+                  <div class="skill-bar-fill" data-width="85%"></div>
                 </div>
               </div>
-              <div>
+              <div class="skill-item">
                 <div class="flex justify-between mb-2">
-                  <span class="text-sm font-semibold">PHP/Laravel</span>
-                  <span class="text-sm text-slate-500">80%</span>
+                  <span class="text-sm font-semibold">PHP / Laravel</span>
+                  <span class="text-sm text-primary font-bold">80%</span>
                 </div>
-                <div
-                  class="w-full bg-slate-200 dark:bg-slate-800 h-2 rounded-full overflow-hidden"
-                >
-                  <div
-                    class="bg-primary h-full rounded-full"
-                    style="width: 80%"
-                  ></div>
+                <div class="w-full bg-slate-200 dark:bg-slate-800 h-2.5 rounded-full overflow-hidden">
+                  <div class="skill-bar-fill" data-width="80%"></div>
                 </div>
               </div>
-              <div>
+              <div class="skill-item">
                 <div class="flex justify-between mb-2">
                   <span class="text-sm font-semibold">Node.js</span>
-                  <span class="text-sm text-slate-500">75%</span>
+                  <span class="text-sm text-primary font-bold">75%</span>
                 </div>
-                <div
-                  class="w-full bg-slate-200 dark:bg-slate-800 h-2 rounded-full overflow-hidden"
-                >
-                  <div
-                    class="bg-primary h-full rounded-full"
-                    style="width: 75%"
-                  ></div>
+                <div class="w-full bg-slate-200 dark:bg-slate-800 h-2.5 rounded-full overflow-hidden">
+                  <div class="skill-bar-fill" data-width="75%"></div>
                 </div>
               </div>
             </div>
           </div>
           <div data-aos="fade-left">
-            <h4 class="text-primary font-bold text-lg mb-8">
+            <h4 class="text-primary font-bold text-lg mb-8 flex items-center">
+              <span class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center mr-3">
+                <span class="material-symbols-outlined text-primary text-[18px]">group</span>
+              </span>
               Habilidades profesionales
             </h4>
-            <div class="space-y-8">
-              <div>
+            <div class="space-y-6">
+              <div class="skill-item">
                 <div class="flex justify-between mb-2">
-                  <span class="text-sm font-semibold">Teamwork</span>
-                  <span class="text-sm text-slate-500">90%</span>
+                  <span class="text-sm font-semibold">Trabajo en equipo</span>
+                  <span class="text-sm text-primary font-bold">90%</span>
                 </div>
-                <div
-                  class="w-full bg-slate-200 dark:bg-slate-800 h-2 rounded-full overflow-hidden"
-                >
-                  <div
-                    class="bg-primary h-full rounded-full"
-                    style="width: 90%"
-                  ></div>
+                <div class="w-full bg-slate-200 dark:bg-slate-800 h-2.5 rounded-full overflow-hidden">
+                  <div class="skill-bar-fill" data-width="90%"></div>
                 </div>
               </div>
-              <div>
+              <div class="skill-item">
                 <div class="flex justify-between mb-2">
                   <span class="text-sm font-semibold">Proactividad</span>
-                  <span class="text-sm text-slate-500">85%</span>
+                  <span class="text-sm text-primary font-bold">85%</span>
                 </div>
-                <div
-                  class="w-full bg-slate-200 dark:bg-slate-800 h-2 rounded-full overflow-hidden"
-                >
-                  <div
-                    class="bg-primary h-full rounded-full"
-                    style="width: 85%"
-                  ></div>
+                <div class="w-full bg-slate-200 dark:bg-slate-800 h-2.5 rounded-full overflow-hidden">
+                  <div class="skill-bar-fill" data-width="85%"></div>
                 </div>
               </div>
-              <div>
+              <div class="skill-item">
                 <div class="flex justify-between mb-2">
                   <span class="text-sm font-semibold">Creatividad</span>
-                  <span class="text-sm text-slate-500">80%</span>
+                  <span class="text-sm text-primary font-bold">80%</span>
                 </div>
-                <div
-                  class="w-full bg-slate-200 dark:bg-slate-800 h-2 rounded-full overflow-hidden"
-                >
-                  <div
-                    class="bg-primary h-full rounded-full"
-                    style="width: 80%"
-                  ></div>
+                <div class="w-full bg-slate-200 dark:bg-slate-800 h-2.5 rounded-full overflow-hidden">
+                  <div class="skill-bar-fill" data-width="80%"></div>
                 </div>
               </div>
-              <div>
+              <div class="skill-item">
                 <div class="flex justify-between mb-2">
-                  <span class="text-sm font-semibold"
-                    >Resolucion de incidencias</span
-                  >
-                  <span class="text-sm text-slate-500">75%</span>
+                  <span class="text-sm font-semibold">Resolución de incidencias</span>
+                  <span class="text-sm text-primary font-bold">75%</span>
                 </div>
-                <div
-                  class="w-full bg-slate-200 dark:bg-slate-800 h-2 rounded-full overflow-hidden"
-                >
-                  <div
-                    class="bg-primary h-full rounded-full"
-                    style="width: 75%"
-                  ></div>
+                <div class="w-full bg-slate-200 dark:bg-slate-800 h-2.5 rounded-full overflow-hidden">
+                  <div class="skill-bar-fill" data-width="75%"></div>
                 </div>
               </div>
             </div>
@@ -420,253 +401,190 @@
         </div>
       </div>
     </section>
-    <section class="py-24 px-4 bg-slate-50 dark:bg-[#080d1a]">
+
+    <!-- ===== PORTFOLIO SECTION ===== -->
+    <section class="py-24 px-4 bg-slate-50 dark:bg-[#080d1a]" id="portfolio">
       <div class="max-w-6xl mx-auto">
-        <h3 class="text-3xl font-bold text-center mb-16" data-aos="fade-up">
-          Portfolio
-        </h3>
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h3 class="text-3xl md:text-4xl font-bold section-title">Portfolio</h3>
+        </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <a href="https://alexmf18.github.io/finanzapp/">
+          <!-- Project 1 -->
+          <a href="https://alexmf18.github.io/finanzapp/" target="_blank" rel="noopener noreferrer">
             <div
-              class="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all duration-300 shadow-lg"
-              data-aos="zoom-in"
+              class="portfolio-card group bg-white dark:bg-card-dark rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700/50 shadow-sm"
+              data-aos="fade-up"
+              data-aos-delay="0"
             >
-              <div class="h-48 overflow-hidden relative">
+              <div class="h-52 overflow-hidden relative">
                 <img
-                  alt="dashboard"
-                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  alt="Finanzapp dashboard"
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   src="imagenes/finanzapp.png"
                 />
-                <div
-                  class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"
-                ></div>
+                <div class="card-overlay">
+                  <span class="material-symbols-outlined text-white text-4xl">open_in_new</span>
+                </div>
               </div>
               <div class="p-6">
-                <h5 class="text-xl font-bold mb-3">Finanzapp</h5>
-                <p
-                  class="text-slate-600 dark:text-slate-400 text-sm mb-4 leading-relaxed"
-                >
+                <h5 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Finanzapp</h5>
+                <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 leading-relaxed">
                   Dashboard para gestionar finanzas personales y empresariales.
                 </p>
                 <div class="flex flex-wrap gap-2">
-                  <span
-                    class="px-2 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded uppercase"
-                    >HTML5</span
-                  >
-                  <span
-                    class="px-2 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded uppercase"
-                    >JavaScript</span
-                  >
-                  <span
-                    class="px-2 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded uppercase"
-                    >Tailwind</span
-                  >
+                  <span class="px-3 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded-full uppercase">HTML5</span>
+                  <span class="px-3 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded-full uppercase">JavaScript</span>
+                  <span class="px-3 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded-full uppercase">Tailwind</span>
                 </div>
               </div>
             </div>
           </a>
-          <a href="https://alexmf18.github.io/travel-agency/">
+          <!-- Project 2 -->
+          <a href="https://alexmf18.github.io/travel-agency/" target="_blank" rel="noopener noreferrer">
             <div
-              class="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all duration-300 shadow-lg"
-              data-aos="zoom-in"
+              class="portfolio-card group bg-white dark:bg-card-dark rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700/50 shadow-sm"
+              data-aos="fade-up"
               data-aos-delay="100"
             >
-              <div class="h-48 overflow-hidden relative">
+              <div class="h-52 overflow-hidden relative">
                 <img
-                  alt="Dashboard Project"
-                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  alt="Japontravel website"
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   src="imagenes/japon.png"
                 />
-                <div
-                  class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"
-                ></div>
+                <div class="card-overlay">
+                  <span class="material-symbols-outlined text-white text-4xl">open_in_new</span>
+                </div>
               </div>
               <div class="p-6">
-                <h5 class="text-xl font-bold mb-3">Japontravel</h5>
-                <p
-                  class="text-slate-600 dark:text-slate-400 text-sm mb-4 leading-relaxed"
-                >
-                  Web de una agencia de viajes organizados a Japon
+                <h5 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Japontravel</h5>
+                <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 leading-relaxed">
+                  Web de una agencia de viajes organizados a Japon.
                 </p>
                 <div class="flex flex-wrap gap-2">
-                  <span
-                    class="px-2 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded uppercase"
-                    >HTML5</span
-                  >
-                  <span
-                    class="px-2 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded uppercase"
-                    >Tailwind</span
-                  >
-                  <span
-                    class="px-2 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded uppercase"
-                    >Animaciones</span
-                  >
+                  <span class="px-3 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded-full uppercase">HTML5</span>
+                  <span class="px-3 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded-full uppercase">Tailwind</span>
+                  <span class="px-3 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded-full uppercase">Animaciones</span>
                 </div>
               </div>
             </div>
           </a>
-          <a href="https://music-festival-omega-five.vercel.app/">
+          <!-- Project 3 -->
+          <a href="https://music-festival-omega-five.vercel.app/" target="_blank" rel="noopener noreferrer">
             <div
-              class="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all duration-300 shadow-lg"
-              data-aos="zoom-in"
+              class="portfolio-card group bg-white dark:bg-card-dark rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700/50 shadow-sm"
+              data-aos="fade-up"
               data-aos-delay="200"
             >
-              <div class="h-48 overflow-hidden relative">
+              <div class="h-52 overflow-hidden relative">
                 <img
-                  alt="music festival"
-                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  alt="Music festival website"
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   src="imagenes/festival.png"
                 />
-                <div
-                  class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"
-                ></div>
+                <div class="card-overlay">
+                  <span class="material-symbols-outlined text-white text-4xl">open_in_new</span>
+                </div>
               </div>
-
               <div class="p-6">
-                <h5 class="text-xl font-bold mb-3">Music festival</h5>
-                <p
-                  class="text-slate-600 dark:text-slate-400 text-sm mb-4 leading-relaxed"
-                >
-                  Web con informacion y compra de entradas para un festival de
-                  musica
+                <h5 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Music Festival</h5>
+                <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 leading-relaxed">
+                  Web con información y compra de entradas para un festival de música.
                 </p>
                 <div class="flex flex-wrap gap-2">
-                  <span
-                    class="px-2 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded uppercase"
-                    >React</span
-                  >
-                  <span
-                    class="px-2 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded uppercase"
-                    >Animaciones</span
-                  >
-                  <span
-                    class="px-2 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded uppercase"
-                    >Tailwind</span
-                  >
+                  <span class="px-3 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded-full uppercase">React</span>
+                  <span class="px-3 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded-full uppercase">Animaciones</span>
+                  <span class="px-3 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded-full uppercase">Tailwind</span>
                 </div>
               </div>
             </div>
           </a>
-          <a href="https://plant-care-seou.vercel.app/">
+          <!-- Project 4 -->
+          <a href="https://plant-care-seou.vercel.app/" target="_blank" rel="noopener noreferrer">
             <div
-              class="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all duration-300 shadow-lg"
-              data-aos="zoom-in"
-              data-aos-delay="200"
+              class="portfolio-card group bg-white dark:bg-card-dark rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700/50 shadow-sm"
+              data-aos="fade-up"
+              data-aos-delay="0"
             >
-              <div class="h-48 overflow-hidden relative">
+              <div class="h-52 overflow-hidden relative">
                 <img
-                  alt="sudoku"
-                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  alt="Sudoku game"
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   src="imagenes/sudoku.png"
                 />
-                <div
-                  class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"
-                ></div>
+                <div class="card-overlay">
+                  <span class="material-symbols-outlined text-white text-4xl">open_in_new</span>
+                </div>
               </div>
-
               <div class="p-6">
-                <h5 class="text-xl font-bold mb-3">Sudoku</h5>
-                <p
-                  class="text-slate-600 dark:text-slate-400 text-sm mb-4 leading-relaxed"
-                >
-                  Juego web de sudoku hecho con react y tailwind
+                <h5 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Sudoku</h5>
+                <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 leading-relaxed">
+                  Juego web de sudoku hecho con React y Tailwind.
                 </p>
                 <div class="flex flex-wrap gap-2">
-                  <span
-                    class="px-2 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded uppercase"
-                    >React</span
-                  >
-                  <span
-                    class="px-2 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded uppercase"
-                    >Animaciones</span
-                  >
-                  <span
-                    class="px-2 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded uppercase"
-                    >Tailwind</span
-                  >
+                  <span class="px-3 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded-full uppercase">React</span>
+                  <span class="px-3 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded-full uppercase">Animaciones</span>
+                  <span class="px-3 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded-full uppercase">Tailwind</span>
                 </div>
               </div>
             </div>
           </a>
-          <a href="https://alexmf18.github.io/voltaic-cars/">
+          <!-- Project 5 -->
+          <a href="https://alexmf18.github.io/voltaic-cars/" target="_blank" rel="noopener noreferrer">
             <div
-              class="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all duration-300 shadow-lg"
-              data-aos="zoom-in"
-              data-aos-delay="200"
+              class="portfolio-card group bg-white dark:bg-card-dark rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700/50 shadow-sm"
+              data-aos="fade-up"
+              data-aos-delay="100"
             >
-              <div class="h-48 overflow-hidden relative">
+              <div class="h-52 overflow-hidden relative">
                 <img
-                  alt="voltaic cars"
-                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  alt="Voltaic Cars website"
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   src="imagenes/voltaic.png"
                 />
-                <div
-                  class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"
-                ></div>
+                <div class="card-overlay">
+                  <span class="material-symbols-outlined text-white text-4xl">open_in_new</span>
+                </div>
               </div>
-
               <div class="p-6">
-                <h5 class="text-xl font-bold mb-3">Voltaic cars</h5>
-                <p
-                  class="text-slate-600 dark:text-slate-400 text-sm mb-4 leading-relaxed"
-                >
-                  Web para una marca de fabricacion y venta de coches electricos
+                <h5 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Voltaic Cars</h5>
+                <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 leading-relaxed">
+                  Web para una marca de fabricación y venta de coches eléctricos.
                 </p>
                 <div class="flex flex-wrap gap-2">
-                  <span
-                    class="px-2 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded uppercase"
-                    >Javascript</span
-                  >
-                  <span
-                    class="px-2 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded uppercase"
-                    >Animaciones</span
-                  >
-                  <span
-                    class="px-2 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded uppercase"
-                    >Tailwind</span
-                  >
+                  <span class="px-3 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded-full uppercase">JavaScript</span>
+                  <span class="px-3 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded-full uppercase">Animaciones</span>
+                  <span class="px-3 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded-full uppercase">Tailwind</span>
                 </div>
               </div>
             </div>
           </a>
-          <a href="https://patient-app-zeta.vercel.app">
+          <!-- Project 6 -->
+          <a href="https://patient-app-zeta.vercel.app" target="_blank" rel="noopener noreferrer">
             <div
-              class="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all duration-300 shadow-lg"
-              data-aos="zoom-in"
+              class="portfolio-card group bg-white dark:bg-card-dark rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700/50 shadow-sm"
+              data-aos="fade-up"
               data-aos-delay="200"
             >
-              <div class="h-48 overflow-hidden relative">
+              <div class="h-52 overflow-hidden relative">
                 <img
-                  alt="voltaic cars"
-                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  alt="Patient management app"
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   src="imagenes/patient.png"
                 />
-                <div
-                  class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"
-                ></div>
+                <div class="card-overlay">
+                  <span class="material-symbols-outlined text-white text-4xl">open_in_new</span>
+                </div>
               </div>
-
               <div class="p-6">
-                <h5 class="text-xl font-bold mb-3">Patient app</h5>
-                <p
-                  class="text-slate-600 dark:text-slate-400 text-sm mb-4 leading-relaxed"
-                >
-                  Aplicacion web para registrar informacion de pacientes
-                  atendidos
+                <h5 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Patient App</h5>
+                <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 leading-relaxed">
+                  Aplicación web para registrar información de pacientes atendidos.
                 </p>
                 <div class="flex flex-wrap gap-2">
-                  <span
-                    class="px-2 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded uppercase"
-                    >react</span
-                  >
-                  <span
-                    class="px-2 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded uppercase"
-                    >CRUD</span
-                  >
-                  <span
-                    class="px-2 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded uppercase"
-                    >Tailwind</span
-                  >
+                  <span class="px-3 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded-full uppercase">React</span>
+                  <span class="px-3 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded-full uppercase">CRUD</span>
+                  <span class="px-3 py-1 text-[10px] font-bold text-primary bg-primary/10 rounded-full uppercase">Tailwind</span>
                 </div>
               </div>
             </div>
@@ -674,37 +592,176 @@
         </div>
       </div>
     </section>
-    <footer
-      class="py-12 px-4 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark text-center"
-    >
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="py-16 px-4 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark">
       <div class="max-w-6xl mx-auto">
-        <p class="text-slate-500 text-sm mb-4">
-          © 2025 Alex Morcillo. All rights reserved.
-        </p>
-        <div class="flex justify-center space-x-6">
-          <a
-            class="text-slate-400 hover:text-primary transition-colors text-xs uppercase font-bold tracking-widest"
-            href="#"
-            >Privacy Policy</a
-          >
-          <a
-            class="text-slate-400 hover:text-primary transition-colors text-xs uppercase font-bold tracking-widest"
-            href="#"
-            >Terms of Service</a
-          >
-          <a
-            class="text-slate-400 hover:text-primary transition-colors text-xs uppercase font-bold tracking-widest"
-            href="mailto:alexmf188@gmail.com"
-            >Contact</a
-          >
+        <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+          <div class="text-center md:text-left">
+            <a href="#" class="text-2xl font-black gradient-text">AM</a>
+            <p class="text-slate-500 text-sm mt-2">Creando experiencias digitales.</p>
+          </div>
+          <div class="flex items-center space-x-4">
+            <a
+              class="social-icon w-10 h-10 flex items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 hover:bg-primary hover:text-black border border-slate-200 dark:border-slate-700 transition-all"
+              href="https://www.linkedin.com/in/alex-morcillo/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-linkedin-in text-sm"></i>
+            </a>
+            <a
+              class="social-icon w-10 h-10 flex items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 hover:bg-primary hover:text-black border border-slate-200 dark:border-slate-700 transition-all"
+              href="https://github.com/alexmf18"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-github text-sm"></i>
+            </a>
+            <a
+              class="social-icon w-10 h-10 flex items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 hover:bg-primary hover:text-black border border-slate-200 dark:border-slate-700 transition-all"
+              href="mailto:alexmf188@gmail.com"
+            >
+              <i class="fas fa-envelope text-sm"></i>
+            </a>
+          </div>
+          <div class="flex flex-col md:flex-row items-center gap-4 md:gap-6">
+            <a class="footer-link text-slate-400 hover:text-primary transition-colors text-xs uppercase font-bold tracking-widest" href="#">Privacy Policy</a>
+            <a class="footer-link text-slate-400 hover:text-primary transition-colors text-xs uppercase font-bold tracking-widest" href="#">Terms of Service</a>
+            <a class="footer-link text-slate-400 hover:text-primary transition-colors text-xs uppercase font-bold tracking-widest" href="mailto:alexmf188@gmail.com">Contact</a>
+          </div>
+        </div>
+        <div class="text-center mt-10 pt-8 border-t border-slate-200 dark:border-slate-800">
+          <p class="text-slate-400 text-sm">
+            &copy; 2025 Alex Morcillo. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
+
+    <!-- ===== SCROLL TO TOP ===== -->
+    <button
+      id="scroll-top"
+      class="scroll-top fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full bg-primary text-black flex items-center justify-center shadow-lg"
+    >
+      <span class="material-symbols-outlined">keyboard_arrow_up</span>
+    </button>
+
+    <!-- ===== SCRIPTS ===== -->
     <script>
+      // AOS Init
       AOS.init({
         duration: 800,
         once: true,
         easing: "ease-out-quad",
+        offset: 50,
+      });
+
+      // Navbar scroll effect
+      const navbar = document.querySelector(".navbar");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+
+      // Mobile menu
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenuClose = document.getElementById("mobile-menu-close");
+      const mobileMenu = document.getElementById("mobile-menu");
+      mobileMenuBtn.addEventListener("click", () => mobileMenu.classList.add("open"));
+      mobileMenuClose.addEventListener("click", () => mobileMenu.classList.remove("open"));
+      document.querySelectorAll(".mobile-nav-link").forEach(link => {
+        link.addEventListener("click", () => mobileMenu.classList.remove("open"));
+      });
+
+      // Scroll to top button
+      const scrollTopBtn = document.getElementById("scroll-top");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 400) {
+          scrollTopBtn.classList.add("visible");
+        } else {
+          scrollTopBtn.classList.remove("visible");
+        }
+      });
+      scrollTopBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+
+      // Typing animation
+      const roles = [
+        "Técnico Informático",
+        "Desarrollador Web",
+        "Frontend Developer",
+        "React Developer",
+      ];
+      let roleIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+      const typedText = document.getElementById("typed-text");
+
+      function typeEffect() {
+        const currentRole = roles[roleIndex];
+        if (isDeleting) {
+          typedText.textContent = currentRole.substring(0, charIndex - 1);
+          charIndex--;
+        } else {
+          typedText.textContent = currentRole.substring(0, charIndex + 1);
+          charIndex++;
+        }
+
+        let speed = isDeleting ? 50 : 100;
+
+        if (!isDeleting && charIndex === currentRole.length) {
+          speed = 2000;
+          isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+          isDeleting = false;
+          roleIndex = (roleIndex + 1) % roles.length;
+          speed = 500;
+        }
+
+        setTimeout(typeEffect, speed);
+      }
+      typeEffect();
+
+      // Floating particles
+      function createParticles() {
+        const container = document.getElementById("particles");
+        for (let i = 0; i < 15; i++) {
+          const particle = document.createElement("div");
+          particle.classList.add("particle");
+          const size = Math.random() * 6 + 3;
+          particle.style.width = size + "px";
+          particle.style.height = size + "px";
+          particle.style.left = Math.random() * 100 + "%";
+          particle.style.bottom = "-10px";
+          particle.style.animationDuration = (Math.random() * 8 + 6) + "s";
+          particle.style.animationDelay = (Math.random() * 10) + "s";
+          container.appendChild(particle);
+        }
+      }
+      createParticles();
+
+      // Skill bar animation on scroll
+      const skillObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const bars = entry.target.querySelectorAll(".skill-bar-fill");
+            bars.forEach(bar => {
+              const width = bar.getAttribute("data-width");
+              bar.style.width = width;
+              bar.classList.add("animated");
+            });
+            skillObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.3 });
+
+      document.querySelectorAll("#skills .grid").forEach(grid => {
+        skillObserver.observe(grid);
       });
     </script>
   </body>
